@@ -20,7 +20,7 @@ class BitBayHttpClient
     {
         $response = $this->client->request('GET', $this->url);
 
-        if(!($body = $response->getBody())){
+        if (!($body = $response->getBody())) {
             return null;
         }
 
