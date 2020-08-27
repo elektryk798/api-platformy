@@ -10,12 +10,10 @@ use App\Http\Clients\BitBayHttpClient;
 class UpdateBitcoinTrades extends Command
 {
     private BitBayHttpClient $client;
-
     private BitcoinTradesRepository $repository;
 
-    protected $signature = 'command:name';
-
-    protected $description = 'Command description';
+    protected $signature = 'bit-bay:update-trades';
+    protected $description = 'Update bitcoin trades';
 
     public function __construct(BitBayHttpClient $client, BitcoinTradesRepository $repository)
     {
@@ -39,6 +37,7 @@ class UpdateBitcoinTrades extends Command
                 'amount' => $apiTrade->amount,
                 'tid' => $apiTrade->tid
             ]);
+
             $this->repository->save($trade);
         }
     }

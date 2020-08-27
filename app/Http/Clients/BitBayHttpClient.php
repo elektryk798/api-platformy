@@ -16,7 +16,7 @@ class BitBayHttpClient
         $this->client = $client;
     }
 
-    public function getBitcoinTradeHistory(): ?object
+    public function getBitcoinTradeHistory(): ?array
     {
         $response = $this->client->request('GET', $this->url);
 
