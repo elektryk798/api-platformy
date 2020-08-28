@@ -14,15 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('/login', 'Api\Auth\LoginController@login')->name('login');
 
-Route::post('/login', [
-    'as' => 'login.login',
-    'uses' => 'Api\Auth\LoginController@login'
-]);
+Route::get('/getAllBitcoins', 'Api\BitcoinTradesController@allTrades')->name('getAll')->middleware('auth:api');
 
-Route::get('/getAllBitcoins', 'Api\BitcoinTradesController@allTrades')->middleware('auth:api');
+Route::get('/getBitcoinById', 'Api\BitcoinTradesController@getTradeById')->name('getById')->middleware('auth:api');
 
-Route::get('/getBitcoinById', 'Api\BitcoinTradesController@getTradeById')->middleware('auth:api');
+Route::get('/refreshToken', 'Api\Auth\LoginController@refreshToken')->name('refreshToken')->middleware('auth:api');

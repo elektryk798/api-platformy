@@ -2,9 +2,11 @@
 
 namespace App;
 
+use App\Events\ApiAccess;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Event;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class User extends Authenticatable implements JWTSubject
@@ -46,5 +48,10 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims(): array
     {
         return [];
+    }
+
+    public function loggedIn(): void
+    {
+        Event::dispatch(new ApiAccess('login', $this));
     }
 }

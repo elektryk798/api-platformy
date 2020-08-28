@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
 use App\Repositories\BitcoinTradesRepository;
 use Illuminate\Http\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -13,20 +12,22 @@ class BitcoinTradesController extends Controller
 
     public function __construct(BitcoinTradesRepository $bitcoinTrades)
     {
+        parent::__construct();
+
         $this->bitcoinTrades = $bitcoinTrades;
     }
 
-    public function allTrades()
+    public function allTrades(): JsonResponse
     {
         $bitcoinTrades = $this->bitcoinTrades->getAll();
 
-        return new JsonResponse(['AllTradesData' => $bitcoinTrades], 200);
+        return new JsonResponse($bitcoinTrades, JsonResponse::HTTP_OK);
     }
 
-    public function getTradeById(Request $request)
+    public function getTradeById(Request $request): JsonResponse
     {
         $bitcoinTrade = $this->bitcoinTrades->getOneById($request->id);
 
-        return new JsonResponse(['TradeData' => $bitcoinTrade], 200);
+        return new JsonResponse($bitcoinTrade, JsonResponse::HTTP_OK);
     }
 }
