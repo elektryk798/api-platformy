@@ -13,19 +13,12 @@ use Illuminate\Queue\SerializesModels;
 
 class ApiAccess
 {
-    use Dispatchable, InteractsWithSockets, SerializesModels;
-
     public string $type;
-    public $user;
+    public User $user;
 
-    public function __construct(string $type, $user)
+    public function __construct(string $type, User $user)
     {
         $this->type = $type;
         $this->user = $user;
-    }
-
-    public function broadcastOn()
-    {
-        return new PrivateChannel('channel-name');
     }
 }

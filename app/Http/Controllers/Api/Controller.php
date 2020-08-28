@@ -18,6 +18,9 @@ class Controller extends BaseController
     public function __construct()
     {
         auth()->setDefaultDriver('api');
-        Event::dispatch(new ApiAccess(Route::currentRouteName(), Auth::user()));
+
+        if ($user = Auth::user()) {
+            Event::dispatch(new ApiAccess(Route::currentRouteName(), $user));
+        }
     }
 }

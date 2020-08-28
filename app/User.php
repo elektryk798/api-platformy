@@ -54,4 +54,9 @@ class User extends Authenticatable implements JWTSubject
     {
         Event::dispatch(new ApiAccess('login', $this));
     }
+
+    public function refreshedToken(): void
+    {
+        Event::dispatch(new ApiAccess('refreshToken', $this));
+    }
 }

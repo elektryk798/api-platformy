@@ -17,6 +17,34 @@ class BitcoinTradesController extends Controller
         $this->bitcoinTrades = $bitcoinTrades;
     }
 
+    /**
+     * @OA\Get(
+     * path="/api/getAllBitcoins",
+     * summary="Get all bitcoin information",
+     * description="Get information about all bitcoin trades",
+     * operationId="getBitcoins",
+     * tags={"getAll"},
+     * security={ {"bearer": {} }},
+     * @OA\Response(
+     * response=200,
+     * description="Success",
+     * @OA\JsonContent(
+     * type="array",
+     * @OA\Items(
+     * ref="#/components/schemas/bitcoinTrades"
+     * )
+     * ),
+     * ),
+     * @OA\Response(
+     *    response=401,
+     *    description="Unathorized user",
+     *    @OA\JsonContent(
+     *       @OA\Property(property="error", type="string", example="Unauthorized")
+     *        )
+     *     )
+     * )
+     */
+
     public function allTrades(): JsonResponse
     {
         $bitcoinTrades = $this->bitcoinTrades->getAll();
@@ -24,6 +52,40 @@ class BitcoinTradesController extends Controller
         return new JsonResponse($bitcoinTrades, JsonResponse::HTTP_OK);
     }
 
+    /**
+     * @OA\Get(
+     * path="/api/getBitcoinById",
+     * summary="Get specific trade information",
+     * description="Get information one bitcoin trade",
+     * operationId="getBitcoinById",
+     * tags={"getById"},
+     * security={ {"bearer": {} }},
+     * @OA\Parameter(
+     *    description="ID of bitcoin trade",
+     *    in="path",
+     *    name="bitcoinId",
+     *    required=true,
+     *    example="1",
+     *    @OA\Schema(
+     *       type="string"
+     *    )
+     * ),
+     * @OA\Response(
+     * response=200,
+     * description="Success",
+     * @OA\JsonContent(
+     * ref="#/components/schemas/bitcoinTrades"
+     * ),
+     * ),
+     * @OA\Response(
+     *    response=401,
+     *    description="Unathorized user",
+     *    @OA\JsonContent(
+     *       @OA\Property(property="error", type="string", example="Unauthorized")
+     *        )
+     *     )
+     * )
+     */
     public function getTradeById(Request $request): JsonResponse
     {
         $bitcoinTrade = $this->bitcoinTrades->getOneById($request->id);
