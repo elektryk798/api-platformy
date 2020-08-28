@@ -26,5 +26,4 @@ class BitBayHttpClient
 
         return json_decode($body->getContents());
     }
-
 }

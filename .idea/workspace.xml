@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5b6e42f-9ec5-4db2-8331-6ec2ef1b9fee" name="Default Changelist" comment="" />
+    <list default="true" id="f5b6e42f-9ec5-4db2-8331-6ec2ef1b9fee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/api-platformy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api-platformy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/UpdateBitcoinTrades.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/UpdateBitcoinTrades.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Clients/BitBayHttpClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Clients/BitBayHttpClient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -118,6 +132,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1gg7s4fBidet9gCH9SYMOKddH1V" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -141,7 +156,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598524607174</updated>
-      <workItem from="1598524614167" duration="8784000" />
+      <workItem from="1598524614167" duration="19137000" />
+      <workItem from="1598601547138" duration="62000" />
+      <workItem from="1598601664478" duration="648000" />
     </task>
     <servers />
   </component>
@@ -153,5 +170,9 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="630" y="173" key="NewPhpClassDialog/0.0.1600.900@0.0.1600.900" timestamp="1598529543407" />
+    <state x="463" y="190" width="672" height="678" key="search.everywhere.popup" timestamp="1598556168589">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="463" y="190" width="672" height="678" key="search.everywhere.popup/0.0.1600.900@0.0.1600.900" timestamp="1598556168589" />
   </component>
 </project>

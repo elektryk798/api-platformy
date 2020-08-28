@@ -2,27 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Repositories\BitcoinTradesRepository;
+use Illuminate\Support\Facades\View;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    private BitcoinTradesRepository $bitcoinTrades;
+
+    public function __construct(BitcoinTradesRepository $bitcoinTrades)
     {
-        $this->middleware('auth');
+        $this->bitcoinTrades = $bitcoinTrades;
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
-        return view('home');
+        $bitcoinTrades = $this->bitcoinTrades->getAll();
+
+        return View::make('home', ['bitcoinTrades' => $bitcoinTrades]);
     }
 }

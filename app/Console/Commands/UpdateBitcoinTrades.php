@@ -30,6 +30,7 @@ class UpdateBitcoinTrades extends Command
 
         foreach ($allTrades as $apiTrade) {
             $trade = new BitcoinTrade();
+
             $trade->fill([
                 'date' => $apiTrade->date,
                 'price' => $apiTrade->price,
