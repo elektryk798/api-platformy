@@ -14,7 +14,7 @@
                             </div>
                         @endif
 
-                        <table id="table_id" class="display">
+                        <table id="bitcoin_trades_table" class="display">
                             <thead>
                             <tr>
                                 <th>Date</th>

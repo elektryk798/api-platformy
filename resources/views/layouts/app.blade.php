@@ -26,7 +26,7 @@
 
     <script>
         $(document).ready(function () {
-            $('#table_id').DataTable();
+            $('#bitcoin_trades_table').DataTable();
         });
     </script>
 </head>
