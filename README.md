@@ -1,4 +1,5 @@
 Aby uruchomić projekt należy rozpakować pobrane repozytorium z https://github.com/elektryk798/api-platformy
+Dokumentacja dostępna pod adresem https://github.com/elektryk798/api-platformy/blob/master/docs/Dokumentacja%20eplatformy.pdf
 
 W głównym katalogu projektu skopiować plik .env.examples i wkleić go w tym samym katalogu pod nazwą .env 
 
