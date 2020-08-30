@@ -78,7 +78,7 @@ class LoginController extends Controller
      * description="Refresh token",
      * operationId="refreshToken",
      * tags={"refreshToken"},
-     * security={ {"bearer": {} }},
+     * security={ {"bearerAuth": {} }},
      * @OA\Response(
      * response=200,
      * description="Success",

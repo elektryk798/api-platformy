@@ -12,6 +12,11 @@ use Illuminate\Routing\Controller as BaseController;
  *    title="Bitcoin Trades API",
  *    version="1.0.0",
  * ),
+ * "securitySchemes": {
+"bearer": {
+"type": "http",
+"scheme": "bearer"
+}
  * @OA\SecurityScheme(
  *     type="http",
  *     name="bearerAuth",

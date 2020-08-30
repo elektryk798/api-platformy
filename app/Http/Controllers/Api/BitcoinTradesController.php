@@ -24,7 +24,7 @@ class BitcoinTradesController extends Controller
      * description="Get information about all bitcoin trades",
      * operationId="getBitcoins",
      * tags={"getAll"},
-     * security={ {"bearer": {} }},
+     * security={ {"bearerAuth": {} }},
      * @OA\Response(
      * response=200,
      * description="Success",
@@ -54,20 +54,21 @@ class BitcoinTradesController extends Controller
 
     /**
      * @OA\Get(
-     * path="/api/getBitcoinById",
+     * path="/api/getBitcoinById/{id}",
      * summary="Get specific trade information",
      * description="Get information one bitcoin trade",
      * operationId="getBitcoinById",
      * tags={"getById"},
-     * security={ {"bearer": {} }},
+     * security={ {"bearerAuth": {} }},
      * @OA\Parameter(
      *    description="ID of bitcoin trade",
      *    in="path",
-     *    name="bitcoinId",
+     *    name="id",
      *    required=true,
      *    example="1",
      *    @OA\Schema(
-     *       type="string"
+     *       type="integer",
+     *       format="int64"
      *    )
      * ),
      * @OA\Response(
